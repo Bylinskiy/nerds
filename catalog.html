@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerds</title>
+</head>
+
+<body>
+    <header class="page-header">
+        <nav class="main-nav">
+            <a class="main-nav__logo" href="">
+                <img src="/img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Nerds">
+            </a>
+            <ul class="main-nav__list site-list">
+                <li class="site-list__item">
+                    <a href="info.html">Студия</a>
+                </li>
+                <li class="site-list__item">
+                    <a href="clients.html">Клиенты</a>
+                </li>
+                <li class="site-list__item">
+                    <a href="store.html">Магазин</a>
+                </li>
+                <li class="site-list__item">
+                    <a href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <button type="button">Корзина</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="catalog-page">
+        <h1>Магазин готовых шаблонов</h1>
+
+        <section class="filters">
+            <h2 class="visually-hidden">Фильтр товаров</h2>
+            <!-- форма фильтров -->
+        </section>
+
+        <section class="catalog">
+            <h2 class="visually-hidden">Каталог</h2>
+            <div class="catalog__sorting-panel sorting-panel">
+                <p class="sorting-panel__title">Сортировать:</p>
+                <ul class="sorting-panel__list sorting-panel-list">
+                    <li class="sorting-panel-list__item">
+                        <a class="sorting-panel-list__button" href="#">По цене</a>
+                    </li>
+                    <li class="sorting-panel-list__item">
+                        <a class="sorting-panel-list__button" href="#">По типу</a>
+                    </li>
+                    <li class="sorting-panel-list__item">
+                        <a class="sorting-panel-list__button" href="#">По названию</a>
+                    </li>
+                    <li class="sorting-panel-list__item">
+                        <a class="sorting-panel-list__button" href="#">По убыванию</a>
+                    </li>
+                    <li class="sorting-panel-list__item">
+                        <a class="sorting-panel-list__button" href="#">По возрастанию</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="catalog__product-list product-list">
+                <li class="product-list__item item-card">
+                    <img class="item-card__image" src="img/img-sedona.jpg" alt="Sedona" width="360" height="576">
+                    <div class="item-card__description">
+                        <h3 class="item-card__title">
+                            <a class="item-card__link" href="#">Sedona</a>
+                        </h3>
+                        <p class="item-card__text">Информационный сайт для туристов</p>
+                        <a class="item-card__button" href="#">9 900 руб.</a>
+                    </div>
+                </li>
+                <li class="product-list__item item-card">
+                    <img class="item-card__image" src="img/img-pink.jpg" alt="Pink App" width="360" height="576">
+                    <div class="item-card__description">
+                        <h3 class="item-card__title">
+                            <a class="item-card__link" href="#">Pink App</a>
+                        </h3>
+                        <p class="item-card__text">Продуктовый лендинг приложения для iOS и Android</p>
+                        <a class="item-card__button" href="#">9 900 руб.</a>
+                    </div>
+                </li>
+                <li class="product-list__item item-card">
+                    <img class="item-card__image" src="img/img-barbershop.jpg" alt="Barbershop" width="360"
+                        height="576">
+                    <div class="item-card__description">
+                        <h3 class="item-card__title">
+                            <a class="item-card__link" href="#">Barbershop</a>
+                        </h3>
+                        <p class="item-card__text">Сайт салона красоты. Для мужчин, да.</p>
+                        <a class="item-card__button" href="#">9 900 руб.</a>
+                    </div>
+                </li>
+                <li class="product-list__item item-card">
+                    <img class="item-card__image" src="img/img-mishka.jpg" alt="Mishka" width="360" height="576">
+                    <div class="item-card__description">
+                        <h3 class="item-card__title">
+                            <a class="item-card__link" href="#">Mishka</a>
+                        </h3>
+                        <p class="item-card__text">Интернет-магазин вязаных игрушек</p>
+                        <a class="item-card__button" href="#">9 900 руб.</a>
+                    </div>
+                </li>
+                <li class="product-list__item item-card">
+                    <img class="item-card__image" src="img/img-aplus.jpg" alt="A Plus" width="360" height="576">
+                    <div class="item-card__description">
+                        <h3 class="item-card__title">
+                            <a class="item-card__link" href="#">A Plus</a>
+                        </h3>
+                        <p class="item-card__text">Лендинг курсов повышения квалификации</p>
+                        <a class="item-card__button" href="#">9 900 руб.</a>
+                    </div>
+                </li>
+                <li class="product-list__item item-card">
+                    <img class="item-card__image" src="img/img-kvast.jpg" alt="Кваст" width="360" height="576">
+                    <div class="item-card__description">
+                        <h3 class="item-card__title">
+                            <a class="item-card__link" href="#">Кваст</a>
+                        </h3>
+                        <p class="item-card__text">Промо-сайт производителя крафтового кваса</p>
+                        <a class="item-card__button" href="#">9 900 руб.</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="catalog__pagination pagination-list">
+                <li class="pagination-list__item pagination-list__item--current">
+                    <a href="#">1</a>
+                </li>
+                <li class="pagination-list__item">
+                    <a href="#">2</a>
+                </li>
+                <li class="pagination-list__item">
+                    <a href="#">3</a>
+                </li>
+                <li class="pagination-list__item pagination-list__item--next">
+                    <a href="#">Следующая</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <section class="contacts">
+            <h2 class="visually-hidden">Как с нами связаться</h2>
+            <div class="contacts__info">
+                <p class="contacts__title">NЁRDS DESIGN STUDIO</p>
+                <p>191186, Санкт-Петербург, <br>
+                    ул. Б. Конюшенная, д. 19/8
+                </p>
+                <p>тел. +7 (812) 275-75-75</p>
+                <button type="button">Напишите нам</button>
+            </div>
+            <div class="map">
+                <img src="/img/bg-map.png" width="1440" height="416" alt="Расположение дизайн-студии на карте">
+            </div>
+        </section>
+
+        <div class="social">
+            <ul class="social__list social-list">
+                <li class="social-list__item">
+                    <a href="#">Вконтакте</a>
+                </li>
+                <li class="social-list__item">
+                    <a href="#">Фэйсбук</a>
+                </li>
+                <li class="social-list__item">
+                    <a href="#">Инстаграм</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="offer">
+            <p class="offer__title">Давайте дружить, это выгодно!</p>
+            <p class="offer__text">Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
