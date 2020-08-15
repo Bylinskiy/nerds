@@ -21,7 +21,7 @@
                     <a href="clients.html">Клиенты</a>
                 </li>
                 <li class="site-list__item">
-                    <a href="store.html">Магазин</a>
+                    <a href="catalog.html">Магазин</a>
                 </li>
                 <li class="site-list__item">
                     <a href="contacts.html">Контакты</a>
@@ -40,7 +40,75 @@
 
         <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
-            <!-- форма фильтров -->
+            <form class="filters__filter" method="get" action="https://echo.htmlacademy.ru">
+                <fieldset>
+                    <legend>Стоимость:</legend>
+                    <div class="range-filter">
+                        <div class="range-filter__controls">
+                            <div class="range-filter__scale">
+                                <div class="range-filter__bar" style="margin-left: 20%; width: 30%"></div>
+                            </div>
+                            <div class="range-filter__toggle range-filter__toggle--min"></div>
+                            <div class="range-filter__toggle range-filter__toggle--max"></div>
+                        </div>
+                        <div class="range-filter__price-controls">
+                            <label class="min-price">от <input name="min-price" type="number" value="0"></label>
+                            <label class="max-price">до <input name="max-price" type="number" value="15000"></label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Сетка:</legend>
+                    <ul class="filters__filter-options">
+                        <li class="filters__filter-option">
+                            <label for="filter-adaptive">Адаптивная</label>
+                            <input class="visually-hidden filters__filter-input filters__filter-input--radio"
+                                name="product-group" type="radio" value="adaptive" id="filter-adaptive" checked>
+                        </li>
+                        <li class="filters__filter-option">
+                            <label for="filter-fixed">Адаптивная</label>
+                            <input class="visually-hidden filters__filter-input filters__filter-input--radio"
+                                name="product-group" type="radio" value="fixed" id="filter-fixed">
+                        </li>
+                        <li class="filters__filter-option">
+                            <label for="filter-rubber">Резиновая</label>
+                            <input class="visually-hidden filters__filter-input filters__filter-input--radio"
+                                name="product-group" type="radio" value="rubber" id="filter-rubber">
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Особенности:</legend>
+                    <ul class="filters__filter-options">
+                        <li class="filters__filter-option">
+                            <input class="visually-hidden filters__filter-input filters__filter-input--checkbox"
+                                name="slider" type="checkbox" id="filter-slider" checked>
+                            <label for="filter-slider">Слайдер</label>
+                        </li>
+                        <li class="filters__filter-option">
+                            <input class="visually-hidden filters__filter-input filters__filter-input--checkbox"
+                                name="block" type="checkbox" id="filter-block">
+                            <label for="filter-block">Блок преимуществ</label>
+                        </li>
+                        <li class="filters__filter-option">
+                            <input class="visually-hidden filters__filter-input filters__filter-input--checkbox"
+                                name="news" type="checkbox" id="filter-news" checked>
+                            <label for="filter-news">Новости</label>
+                        </li>
+                        <li class="filters__filter-option">
+                            <input class="visually-hidden filters__filter-input filters__filter-input--checkbox"
+                                name="gallery" type="checkbox" id="filter-gallery">
+                            <label for="filter-gallery">Галерея</label>
+                        </li>
+                        <li class="filters__filter-option">
+                            <input class="visually-hidden filters__filter-input filters__filter-input--checkbox"
+                                name="basket" type="checkbox" id="filter-basket">
+                            <label for="filter-basket">Корзина</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <button class="filters__button" type="submit">Показать</button>
+            </form>
         </section>
 
         <section class="catalog">
@@ -180,6 +248,25 @@
             <p class="offer__text">Скидка 10% для друзей из социальных сетей.</p>
         </div>
     </footer>
+
+    <section class="popup">
+        <h2>Напишите нам</h2>
+        <form class="popup__form feedback" action="https://echo.htmlacademy.ru" method="post">
+            <p>
+                <label for="feedback__name">Ваше имя:</label>
+                <input type="text" name="name" id="feedback__name" placeholder="Представьтесь, пожалуйста">
+            </p>
+            <p>
+                <label for="feedback__email">Ваш e-mail:</label>
+                <input type="email" name="email" id="feedback__email" placeholder="Для отправки ответа">
+            </p>
+            <p>
+                <label for="feedback__text">Текст письма:</label>
+                <input type="text" name="text" id="feedback__text" placeholder="В свободной форме">
+            </p>
+            <button class="feedback__button" type="submit">Отправить</button>
+        </form>
+    </section>
 
 </body>
 

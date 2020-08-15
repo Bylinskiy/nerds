@@ -21,7 +21,7 @@
                     <a href="clients.html">Клиенты</a>
                 </li>
                 <li class="site-list__item">
-                    <a href="store.html">Магазин</a>
+                    <a href="catalog.html">Магазин</a>
                 </li>
                 <li class="site-list__item">
                     <a href="contacts.html">Контакты</a>
@@ -164,5 +164,24 @@
                 <p class="offer__text">Скидка 10% для друзей из социальных сетей.</p>
             </div>
         </footer>
+
+        <section class="popup">
+            <h2>Напишите нам</h2>
+            <form class="popup__form feedback" action="https://echo.htmlacademy.ru" method="post">
+                <p>
+                    <label for="feedback__name">Ваше имя:</label>
+                    <input type="text" name="name" id="feedback__name" placeholder="Представьтесь, пожалуйста">
+                </p>
+                <p>
+                    <label for="feedback__email">Ваш e-mail:</label>
+                    <input type="email" name="email" id="feedback__email" placeholder="Для отправки ответа">
+                </p>
+                <p>
+                    <label for="feedback__text">Текст письма:</label>
+                    <input type="text" name="text" id="feedback__text" placeholder="В свободной форме">
+                </p>
+                <button class="feedback__button" type="submit">Отправить</button>
+            </form>
+        </section>
 </body>
 </html>
