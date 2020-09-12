@@ -71,7 +71,7 @@ input[type="radio"].visually-hidden {
 .nerds-catalog-page h1 {
     width: 100%;
     min-height: 160px;
-    margin: 80px 0 0;
+    margin: 79px 0 0;
 
 
     font-size: 55px;
@@ -124,6 +124,85 @@ input[type="radio"].visually-hidden {
     text-align: right;
 }
 
+/* TODO: blocks/slider */
+.slider {
+    width: 1160px;
+    min-height: 431px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.slider__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.slider__item {
+    width: 100%;
+    padding: 78px 0 80px;
+}
+
+.slider__title {
+    margin: 0 0 25px;
+
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 700;
+
+    color: #000000;
+}
+
+.slider__text {
+    margin: 0 0 40px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #283136;
+}
+
+.slider__button {
+    display: inline-block;
+    padding: 13px 55px;
+
+    font: inherit;
+    text-align: center;
+    color: #ffffff;
+    vertical-align: middle;
+    text-transform: uppercase;
+    border: none;
+
+    background-color: #fb565a;
+    border: none;
+    border-radius: 5px;
+}
+
+.slider__item--first {
+    background-image: url(/img/bg-slide-01.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+
+.slider__item--second {
+    background-image: url(/img/bg-slide-02.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.slider__item--third {
+    background-image: url(/img/bg-slide-03.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.slider__item--first,
+.slider__item--second {
+    display: none;
+}
+
 /* TODO: blocks/site-list */
 
 .site-list {
@@ -140,6 +219,26 @@ input[type="radio"].visually-hidden {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+.user-list__item--basket-link a {
+    position: relative;
+    padding-left: 50px;
+}
+
+.user-list__item--basket-link a::before{
+    content: "";
+
+    position: absolute;
+    top: 2px;
+    left: 10px;
+
+    width: 15px;
+    height: 15px;
+
+    background-image: url(/img/icon-cart.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 /* TODO: blocks/services */
@@ -168,7 +267,7 @@ input[type="radio"].visually-hidden {
 
 .service-list__title {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     padding: 0;
     order: 1;
     font-size: 24px;
@@ -227,7 +326,8 @@ input[type="radio"].visually-hidden {
 .about-us {
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
+    margin: 40px 0 0;
+    padding-bottom: 42px;
 
     border-bottom: 2px solid #eeeeee;
 }
@@ -241,7 +341,7 @@ input[type="radio"].visually-hidden {
 }
 
 .about-us__heading {
-    margin: 35px 0 30px 0;
+    margin: 35px 0 33px 0;
     padding: 0;
 
     font-size: 45px;
@@ -251,7 +351,7 @@ input[type="radio"].visually-hidden {
 
 .about_us__text {
     margin: 0;
-    margin-bottom: 42px;
+    margin-bottom: 39px;
     font-size: 16px;
     line-height: 24px;
 }
@@ -267,12 +367,13 @@ input[type="radio"].visually-hidden {
 .about-us__list {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 8px 0 0;
 }
 
 .about-us__item {
     position: relative;
-    padding: 0 0 0 30px;
+    margin-bottom: 25px;
+    padding: 0 0 0 35px;
 }
 
 .about-us__item::before {
@@ -282,14 +383,14 @@ input[type="radio"].visually-hidden {
     top: 10px;
     left: 0;
 
-    width: 20px;
+    width: 25px;
     height: 2px;
 
     background-color: #fb565a;
 }
 
 .about-us__stats img {
-    margin-bottom: 35px;
+    margin-bottom: 15px;
 }
 
 
@@ -304,10 +405,14 @@ input[type="radio"].visually-hidden {
     text-align: center;
 }
 
+.about-us__table {
+    margin: 23px 0 0 -16px;
+}
+
 /* TODO: blocks/table-stats */
 .table-stats {
     border-collapse: separate;
-    border-spacing: 15px 32px;
+    border-spacing: 16px 33px;
 }
 
 .table-stats__percent-cell {
@@ -331,7 +436,7 @@ input[type="radio"].visually-hidden {
 .clients__list {
     width: 1160px;
     padding: 0;
-    min-height: 180px;
+    min-height: 165px;
 
     border-bottom: 2px solid #eeeeee;
 }
@@ -699,13 +804,13 @@ border-radius: 5px;
     flex-direction: column;
     width: 1440px;
     margin: 80px auto 0 auto;
-    padding: 0 0 70px;
+    padding: 0 0 60px;
 }
 
 .main-footer__wrapper {
     display: flex;
     width: 1160px;
-    margin: 70px 0 0 0;
+    margin: 63px 0 0 10px;
     padding: 0 20px;
 }
 
@@ -764,9 +869,9 @@ border-radius: 5px;
 .social__list {
     display: flex;
     justify-content: space-between;
-    width: 280px;
+    width: 260px;
 
-    margin: 0 140px 0 0;
+    margin: 0 140px 0 20px;
     padding: 0;
     list-style: none;
 }
