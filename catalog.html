@@ -66,19 +66,19 @@
                     <legend>Сетка:</legend>
                     <ul class="filters__filter-options">
                         <li class="filters__filter-option">
-                            <label for="filter-adaptive">Адаптивная</label>
                             <input class="visually-hidden filters__filter-input filters__filter-input--radio"
-                                name="product-group" type="radio" value="adaptive" id="filter-adaptive" checked>
+                                name="product-type" type="radio" id="filter-adaptive" checked>
+                                <label for="filter-adaptive">Адаптивная</label>
+                            </li>
+                        <li class="filters__filter-option">
+                            <input class="visually-hidden filters__filter-input filters__filter-input--radio"
+                                name="product-type" type="radio" id="filter-fixed">
+                                <label for="filter-fixed">Фиксированная</label>
                         </li>
                         <li class="filters__filter-option">
-                            <label for="filter-fixed">Адаптивная</label>
                             <input class="visually-hidden filters__filter-input filters__filter-input--radio"
-                                name="product-group" type="radio" value="fixed" id="filter-fixed">
-                        </li>
-                        <li class="filters__filter-option">
-                            <label for="filter-rubber">Резиновая</label>
-                            <input class="visually-hidden filters__filter-input filters__filter-input--radio"
-                                name="product-group" type="radio" value="rubber" id="filter-rubber">
+                                name="product-type" type="radio" id="filter-rubber">
+                                <label for="filter-rubber">Резиновая</label>
                         </li>
                     </ul>
                 </fieldset>
@@ -120,7 +120,8 @@
             <h2 class="visually-hidden">Каталог</h2>
             <div class="catalog__sorting-panel sorting-panel">
                 <p class="sorting-panel__title">Сортировать:</p>
-                <ul class="sorting-panel__list">
+                <div class="sorting-panel__wrapper">
+                <ul class="sorting-panel__type-list">
                     <li class="sorting-panel__item sorting-panel__item--current">
                         <a class="sorting-panel__button" href="#">По цене</a>
                     </li>
@@ -130,13 +131,16 @@
                     <li class="sorting-panel__item">
                         <a class="sorting-panel__button" href="#">По названию</a>
                     </li>
+                </ul>
+                <ul class="sorting-panel__direction-list">
                     <li class="sorting-panel__item sorting-panel__item--current">
-                        <a class="sorting-panel__button" href="#">По убыванию</a>
+                        <a class="sorting-panel__button sorting-panel__button--down" href="#" aria-label="По возрастанию"></a>
                     </li>
                     <li class="sorting-panel__item">
-                        <a class="sorting-panel__button" href="#">По возрастанию</a>
+                        <a class="sorting-panel__button sorting-panel__button--up" href="#" aria-label="По убыванию"></a>
                     </li>
                 </ul>
+                </div>
             </div>
             <ul class="catalog__product-list product-list">
                 <li class="product-list__item item-card">

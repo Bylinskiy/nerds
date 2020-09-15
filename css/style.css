@@ -82,6 +82,10 @@ input[type="radio"].visually-hidden {
     background-color: #eeeeee;
 }
 
+.nerds-catalog-page .main-footer{
+    margin-top: 60px;
+}
+
 /* TODO: blocks/main-nav */
 .main-nav {
     display: flex;
@@ -176,7 +180,7 @@ input[type="radio"].visually-hidden {
 
     background-color: #fb565a;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .slider__item--first {
@@ -306,7 +310,7 @@ input[type="radio"].visually-hidden {
 
     background-color: #000000;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .service-list__button--yellow {
@@ -495,13 +499,75 @@ input[type="radio"].visually-hidden {
 }
 
 .filters__filter-option {
-    padding-left: 25px;
     margin-bottom: 14px;
+    padding-left: 35px;
+}
+
+.filters__filter-option label {
+    position: relative;
+
+    display: block;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.filters__filter-input--radio+label::before {
+    content: "";
+    position: absolute;
+
+    width: 25px;
+    height: 25px;
+    left: -35px;
+
+    background-image: url("/img/radio-off.svg");
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+}
+
+.filters__filter-input--checkbox+label::before {
+    content: "";
+    position: absolute;
+
+    width: 23px;
+    height: 23px;
+    left: -35px;
+
+    background-image: url("/img/checkbox-off.svg");
+    background-size: 23px 23px;
+    background-repeat: no-repeat;
+}
+
+.filters__filter-input--radio:checked+label::before {
+    content: "";
+    position: absolute;
+
+    width: 25px;
+    height: 25px;
+    left: -35px;
+
+    background-image: url("/img/radio-on.svg");
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+}
+
+.filters__filter-input--checkbox:checked+label::before {
+    content: "";
+    position: absolute;
+
+    width: 27px;
+    height: 27px;
+    top: -2px;
+    left: -35px;
+
+    background-image: url("/img/checkbox-on.svg");
+    background-size: 27px 27px;
+    background-repeat: no-repeat;
 }
 
 .filters__button {
     display: inline-block;
-    padding: 13px 80px;
+    padding: 15px 90px;
 
     font: inherit;
     font-size: 16px;
@@ -514,7 +580,7 @@ input[type="radio"].visually-hidden {
 
     background-color: #eeeeee;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 /* TODO: blocks/range-filter */
@@ -535,7 +601,7 @@ input[type="radio"].visually-hidden {
 
     background-color: #f1f1f1;
 
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .range-filter__scale {
@@ -598,7 +664,7 @@ input[type="radio"].visually-hidden {
     color: #283136;
 
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     background: #f1f1f1;
 }
 
@@ -619,11 +685,11 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog__product-list {
-    margin-bottom: 60px;
+    margin-bottom: 27px;
 }
 
 .catalog__pagination {
-    width: 460px;
+    width: 440px;
 }
 /* TODO: blocks/sorting-panel */
 
@@ -632,6 +698,12 @@ input[type="radio"].visually-hidden {
     justify-content: space-between;
 
     list-style: none;
+}
+
+.sorting-panel__wrapper {
+    display: flex;
+    justify-content: flex-end;
+
 }
 
 .sorting-panel__title {
@@ -645,7 +717,7 @@ input[type="radio"].visually-hidden {
     color: black;
 }
 
-.sorting-panel__list {
+.sorting-panel__type-list {
     display: flex;
     justify-content: space-between;
     margin: 0;
@@ -656,6 +728,38 @@ input[type="radio"].visually-hidden {
     text-transform: uppercase;
 
     list-style: none;
+}
+
+.sorting-panel__direction-list {
+    display: flex;
+    justify-content: space-between;
+    width: 48px;
+    margin: 5px 0 0 15px;
+    padding: 0;
+
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+
+    list-style: none;
+}
+
+.sorting-panel__button--down {
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 5.5px solid transparent;
+    border-right: 5.5px solid transparent;
+    border-top: 10px solid #000000;
+}
+
+.sorting-panel__button--up {
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 5.5px solid transparent;
+    border-right: 5.5px solid transparent;
+    border-bottom: 10px solid #000000;
 }
 
 .sorting-panel__item {
@@ -693,10 +797,25 @@ input[type="radio"].visually-hidden {
 .item-card {
     position: relative;
     height: 576px;
+
+    border-top: 40px solid rgba(77, 77, 77, 0.12);
+    border-radius: 3px;
+}
+
+.item-card::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: -27px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 23px 0 0  #ffffff, 46px 0 0  #ffffff;
 }
 
 .item-card__description {
-    /* display: none; */
+    display: none;
     position: absolute;
     top: 346px;
     width: 100%;
@@ -705,6 +824,10 @@ input[type="radio"].visually-hidden {
     background-color: #eeeeee;
 
     text-align: center;
+}
+
+.item-card:hover .item-card__description {
+    display: block;
 }
 
 .item-card__title {
@@ -743,7 +866,7 @@ border: none;
 
 background-color: #fb565a;
 border: none;
-border-radius: 5px;
+border-radius: 3px;
 }
 
 
@@ -762,7 +885,7 @@ border-radius: 5px;
 
 .pagination-list__item{
     display: inline-block;
-    padding: 10px 19px;
+    padding: 11px 20px;
 
     font: inherit;
     text-align: center;
@@ -772,11 +895,11 @@ border-radius: 5px;
 
     background-color: #eeeeee;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .pagination-list__item--next {
-    padding: 10px 75px;
+    padding: 11px 78px;
 }
 
 .pagination-list__item a {
@@ -785,7 +908,7 @@ border-radius: 5px;
 
 .pagination-list__item--current{
     display: inline-block;
-    padding: 8px 17px;
+    padding: 9px 18px;
 
     font: inherit;
     text-align: center;
@@ -795,7 +918,7 @@ border-radius: 5px;
 
     background-color: #ffffff;
     border: solid 3px #dbdbdb;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 /* TODO: blocks/main-footer */
 
@@ -860,7 +983,7 @@ border-radius: 5px;
 
     background-color: #fb565a;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 
@@ -1031,5 +1154,5 @@ border-radius: 5px;
 
     background-color: #fb565a;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
 }
